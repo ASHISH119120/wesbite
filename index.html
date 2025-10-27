@@ -98,22 +98,17 @@
 </p>
 
 <!-- List starts -->
- <ul style="list-style:none; padding:0; margin:0;">
-    <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
-      <span style="color:#fff; font-size:18px; margin-right:8px;">✔️</span>
-      <span style="font-weight:bold;">Work from anywhere full-time or part-time at your convenience</span>
+<ul class="dtr-list-checkmark dtr-mb-5 text-size-md color-white">
+    <li>
+        <h6> Work from anywhere full-time or part-time at your convenience</h6>
     </li>
-
-    <li style="display:flex; align-items:flex-start; margin-bottom:12px;">
-      <span style="color:#fff; font-size:18px; margin-right:8px;">✔️</span>
-      <span style="font-weight:bold;">Get certified and start selling health, motor &amp; life insurance</span>
+    <li>
+        <h6>Get certified and start selling health, motor & life insurance</h6>
     </li>
-
-    <li style="display:flex; align-items:flex-start;">
-      <span style="color:#fff; font-size:18px; margin-right:8px;">✔️</span>
-      <span style="font-weight:bold;">Enjoy high commissions, fast payouts, and dedicated support</span>
+    <li>
+        <h6>Enjoy high commissions, fast payouts, and dedicated support</h6>
     </li>
-  </ul>
+</ul>
 <!-- List ends -->
  
  
@@ -122,18 +117,19 @@
                 <!-- column 1 ends --> 
                 
                 <!-- column 2 starts -->
-                <div class="col-12 col-md-6 wow fadeInRight" data-wow-delay="0.4s" id="contact">
+                <div class="col-12 col-md-6 wow fadeInRight" data-wow-delay="0.4s" style="margin-top: -200px;" id="contact">
                     <div class="dtr-hero-form"> 
                         
                         <!-- form header starts -->
                 <div class="dtr-form-head">
-                    <h4 class="text-center" style="font-weight: bold;">Start Your POSP Journey Now</h4>
+                    <h4 class="text-center" style="font-weight: bold;">Get a free quote</h4>
                 </div>
 
                         
                         <!-- form body starts -->
                         <div class="dtr-form-body">
-                            <p class="text-center dtr-mb-4 text-size-sm">Empowering you to earn anytime, anywhere</p>
+                            <p class="text-center dtr-mb-4 text-size-sm">We make getting the best insurance simple.  Let our team
+                                do the work so you don't have to.</p>
                             <div class="dtr-form dtr-submit-full">
                                 <form  id="contactform" method="post" action="store_inquiries.php">
                                     <fieldset>
@@ -149,25 +145,16 @@
                                         <p class="antispam">Leave this empty: <br />
                                             <input name="url" />
                                         </p>
-                                     <p style="position:relative;">
-  <input name="city" id="city" class="required city" type="text" placeholder="Enter your city"
-         style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid #ccc; outline:none; transition:0.3s; font-size:14px;">
-</p>
-
-                                        <button type="submit" class="dtr-btn-round dtr-btn-blue">Submit</button>
+                                        <p>
+                                            <select name="subject" class="dtr-select">
+                                                <option value="">Select Insurance Type</option>
+                                                <option value="health">Health Insuarance</option>
+                                                <option value="pet">Motor Insuarance</option>
+                                                <option value="travel">Life Insuarance</option>
+                                            </select>
+                                        </p>
+                                        <button type="submit" class="dtr-btn-round dtr-btn-blue"> Get a quote</button>
                                         <div id="result"></div>
-                                        <p class="text-center text-size-xs" style="
-    margin-top: 10px;
-    font-size: 13px;
-    color: #666;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-">
-  <i class="fa-solid fa-circle-check" style="color:#007bff; margin-right:5px;"></i>
-  By clicking <strong>Submit</strong>, you agree to let us connect with you 
-  regarding <strong>POSP registration</strong> and related insurance opportunities.
-</p>
-
                                     </fieldset>
                                 </form>
                             </div>
@@ -181,14 +168,8 @@
             </div>
         </div>
     </section>
-
-
-    
-
     <!-- hero section starts
-================================================== -->
-
-
+================================================== --> 
     
     <!-- quickfeature section starts
 ================================================== -->
@@ -205,7 +186,7 @@
         Why Partner with <span class="color-accent">Policies365?</span>
       </h2>
       <p class="text-size-md color-dark-muted wow fadeInUp" data-wow-delay="0.3s">
-        Start your insurance career with free training, high earnings, expert support.
+        Start your insurance career with free training, high earnings, and 24×7 expert support.
       </p>
     </div>
 
@@ -350,7 +331,7 @@
 <!-- Section 2: What You'll Get -->
 <!-- ============================= -->
 <!-- Benefits Section -->
-<section id="benefits" class="py-7 bg-light-pattern benefits-section" >
+<section id="benefits" class="py-7 bg-light-pattern benefits-section">
   <div class="container">
 
     <!-- Section Heading -->
@@ -430,10 +411,6 @@
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #f5f9ff, #edf3ff);
-  min-height: 400px;       /* ensures good section height */
-  margin: 40px 0;          /* adds space above and below */
-  padding: 60px 0;         /* adds space inside for content */
-  border-radius: 12px;     /* optional: soft corners for a modern look */
 }
 
 /* Gradient text effect */
@@ -573,7 +550,11 @@
 
     <div class="position-relative">
       <!-- Animated connecting line -->
-      
+      <svg class="connecting-line" width="100%" height="100">
+        <path d="M0,50 Q50,0 100,50 T200,50 T300,50 T400,50" stroke="#4da6ff" stroke-width="3" fill="transparent">
+          <animate attributeName="stroke-dashoffset" from="400" to="0" dur="2s" repeatCount="indefinite"/>
+        </path>
+      </svg>
 
       <div class="row align-items-center">
         <!-- Step 1 -->
@@ -619,39 +600,60 @@
 
 
 <style>
-   .work-card {
-  position: relative;
-  background: #ffffff;
-  border: 2px solid #e3ecff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+    .work-card {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .work-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(77,166,255,0.3);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 
-/* Number Circle - Top Right Corner */
 .circle-number {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #1a2b4c, #4da6ff);
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  animation: bounce 2s infinite ease-in-out;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: bounce 2s infinite;
 }
 
+.animated-number {
+    animation: pulse 1.5s infinite alternate;
+}
 
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.connecting-line {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    z-index: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px){
+    .circle-number { left: 10px; top: -20px; }
+}
 
 </style>
 
@@ -698,7 +700,6 @@
                     <span class="dtr-feature-box-icon"><i class="icon-rocket"></i></span>
                     <h5>Motivated & Ambitious</h5>
                     <p>Perfect for anyone motivated to earn more and help others protect their future.</p>
-                    <br>
                 </div>
             </div>
 
@@ -770,7 +771,7 @@
                                     </p>
                                 
                                 <!-- button here -->
-                                <div class="dtr-btn"> <a href="#contact">Get Started<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
+                                <div class="dtr-btn"> <a href="#">Get a quote<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
                             </div>
                             <!-- column 2 ends --> 
                             
@@ -801,7 +802,7 @@
                                </p>
                                 
                                 <!-- button here -->
-                                <div class="dtr-btn"> <a href="#contact">Get Started<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
+                                <div class="dtr-btn"> <a href="#">Get a quote<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
                             </div>
                             <!-- column 1 ends --> 
                             
@@ -840,7 +841,7 @@
                             </p>
 
                                 <!-- button here -->
-                                <div class="dtr-btn"> <a href="#contact">Get Started<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
+                                <div class="dtr-btn"> <a href="#">Get a quote<span><i class="icon-arrow-right" aria-hidden="true"></i></span> </a> </div>
                             </div>
                             <!-- column 2 ends --> 
                             
@@ -976,111 +977,105 @@
 <!-- testimonial starts
 ================================================== -->
 <section id="reviews" class="dtr-py-7 bg-grey">
-  <h2 class="text-center mb-3" style="font-weight:700;">What Our Customers Say</h2>
-  <p class="text-center text-muted mb-5">Real reviews from trusted Google users who chose Policies365</p>
-
-  <!-- Swiper Container -->
-  <div class="swiper-container dtr-testimonial-carousel dtr-swiper-has-arrows">
-    <div class="swiper-wrapper">
-
-      <!-- Review 1 -->
-      <div class="swiper-slide">
-        <div class="dtr-testimonial-wrapper p-4"
-             style="background:#fff; border-radius:18px; box-shadow:0 8px 20px rgba(0,0,0,0.08); transition:transform 0.3s; display:flex; align-items:flex-start; gap:18px;">
-          <img src="assets/images/logo_1.png" alt="Google Review" 
-               style="width:55px; height:55px; object-fit:contain; background:#fff; border-radius:50%; box-shadow:0 0 8px rgba(66,133,244,0.2); flex-shrink:0;">
-          <div>
-            <h6 style="font-weight:600; margin:0;">Anil Yadav</h6>
-            <p class="text-muted mb-1" style="font-size:14px;">Health Insurance</p>
-            <div style="color:#FFD700; font-size:17px; margin-bottom:5px;">⭐⭐⭐⭐⭐</div>
-            <p style="font-size:15px; line-height:1.6; color:#333; margin:0;">
-              "  I found the perfect health insurance plan on Navnit Insurance — affordable, comprehensive, and easy to buy. I paid online, and the policy was issued instantly."
-            </p>
-          </div>
+    <h2 class="text-center">Customer Reviews</h2>
+    <p class="text-center">Hear what our clients say about Health, Motor, and Life Insurance</p>
+    
+    <!-- swiper starts -->
+    <div class="swiper-container dtr-testimonial-carousel dtr-swiper-has-arrows mt-5">
+        <div class="swiper-wrapper"> 
+            
+            <!-- slide 1 starts -->
+            <div class="swiper-slide">
+                <div class="dtr-testimonial-wrapper">
+                    <div class="d-flex align-items-center dtr-mb-4"> 
+                        <!-- male icon on black background -->
+                        <span class="dtr-mr-3" style="width:60px; height:60px; display:flex; align-items:center; justify-content:center; background:#000; border-radius:50%;">
+                            <i class="fas fa-male" style="color:#FFD700; font-size:28px;"></i>
+                        </span>
+                        <div class="dtr-mr-5">
+                            <h6 class="dtr-mb-0">Ravi Kumar</h6>
+                            <p class="dtr-mb-0">Health Insurance</p>
+                        </div>
+                        <div class="ml-auto">
+                            <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    "Policies365 helped me choose the best health plan for my family. The process was smooth, and their guidance was very clear."
+                </div>
+            </div>
+            <!-- slide 1 ends --> 
+            
+            <!-- slide 2 starts -->
+            <div class="swiper-slide">
+                <div class="dtr-testimonial-wrapper">
+                    <div class="d-flex align-items-center dtr-mb-4"> 
+                        <!-- female icon on black background -->
+                        <span class="dtr-mr-3" style="width:60px; height:60px; display:flex; align-items:center; justify-content:center; background:#000; border-radius:50%;">
+                            <i class="fas fa-female" style="color:#FF69B4; font-size:28px;"></i>
+                        </span>
+                        <div class="dtr-mr-5">
+                            <h6 class="dtr-mb-0">Anjali Sharma</h6>
+                            <p class="dtr-mb-0">Motor Insurance</p>
+                        </div>
+                        <div class="ml-auto">
+                            <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    "I renewed my car insurance with ease. Policies365 offered multiple options and explained all benefits in detail."
+                </div>
+            </div>
+            <!-- slide 2 ends --> 
+            
+            <!-- slide 3 starts -->
+            <div class="swiper-slide">
+                <div class="dtr-testimonial-wrapper">
+                    <div class="d-flex align-items-center dtr-mb-4"> 
+                        <!-- male icon -->
+                        <span class="dtr-mr-3" style="width:60px; height:60px; display:flex; align-items:center; justify-content:center; background:#000; border-radius:50%;">
+                            <i class="fas fa-male" style="color:#00CED1; font-size:28px;"></i>
+                        </span>
+                        <div class="dtr-mr-5">
+                            <h6 class="dtr-mb-0">Suresh Patel</h6>
+                            <p class="dtr-mb-0">Life Insurance</p>
+                        </div>
+                        <div class="ml-auto">
+                            <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    "Policies365 made securing life insurance simple and stress-free. I now feel confident about my family's future."
+                </div>
+            </div>
+            <!-- slide 3 ends --> 
+            
+            <!-- slide 4 starts -->
+            <div class="swiper-slide">
+                <div class="dtr-testimonial-wrapper">
+                    <div class="d-flex align-items-center dtr-mb-4"> 
+                        <!-- female icon -->
+                        <span class="dtr-mr-3" style="width:60px; height:60px; display:flex; align-items:center; justify-content:center; background:#000; border-radius:50%;">
+                            <i class="fas fa-female" style="color:#FF8C00; font-size:28px;"></i>
+                        </span>
+                        <div class="dtr-mr-5">
+                            <h6 class="dtr-mb-0">Priya Singh</h6>
+                            <p class="dtr-mb-0">Health Insurance</p>
+                        </div>
+                        <div class="ml-auto">
+                            <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    "Getting health insurance for my parents was effortless. Policies365 answered every question and guided me professionally."
+                </div>
+            </div>
+            <!-- slide 4 ends --> 
+            
         </div>
-      </div>
-
-      <!-- Review 2 -->
-      <div class="swiper-slide">
-        <div class="dtr-testimonial-wrapper p-4"
-             style="background:#fff; border-radius:18px; box-shadow:0 8px 20px rgba(0,0,0,0.08); transition:transform 0.3s; display:flex; align-items:flex-start; gap:18px;">
-          <img src="assets/images/logo_1.png" alt="Google Review"
-               style="width:55px; height:55px; object-fit:contain; background:#fff; border-radius:50%; box-shadow:0 0 8px rgba(66,133,244,0.2); flex-shrink:0;">
-          <div>
-            <h6 style="font-weight:600; margin:0;">santosh poojari</h6>
-            <p class="text-muted mb-1" style="font-size:14px;">Motor Insurance</p>
-            <div style="color:#FFD700; font-size:17px; margin-bottom:5px;">⭐⭐⭐⭐½</div>
-            <p style="font-size:15px; line-height:1.6; color:#333; margin:0;">
-              "Excellent service!!! Thanking you  for guiding me about renewal of my  insurance policy and explaining all benefits in detailed manner. Good Job, Keep it up!!!
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Review 3 -->
-      <div class="swiper-slide">
-        <div class="dtr-testimonial-wrapper p-4"
-             style="background:#fff; border-radius:18px; box-shadow:0 8px 20px rgba(0,0,0,0.08); transition:transform 0.3s; display:flex; align-items:flex-start; gap:18px;">
-          <img src="assets/images/logo_1.png" alt="Google Review"
-               style="width:55px; height:55px; object-fit:contain; background:#fff; border-radius:50%; box-shadow:0 0 8px rgba(66,133,244,0.2); flex-shrink:0;">
-          <div>
-            <h6 style="font-weight:600; margin:0;">Kunal Chavan</h6>
-            <p class="text-muted mb-1" style="font-size:14px;">Life Insurance</p>
-            <div style="color:#FFD700; font-size:17px; margin-bottom:5px;">⭐⭐⭐⭐</div>
-            <p style="font-size:15px; line-height:1.6; color:#333; margin:0;">
-              "Got the best term plan insurance for my family. Would recommend Navnit Insurance to everyone!
-"
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Review 4 -->
-      <div class="swiper-slide">
-        <div class="dtr-testimonial-wrapper p-4"
-             style="background:#fff; border-radius:18px; box-shadow:0 8px 20px rgba(0,0,0,0.08); transition:transform 0.3s; display:flex; align-items:flex-start; gap:18px;">
-          <img src="assets/images/logo_1.png" alt="Google Review"
-               style="width:55px; height:55px; object-fit:contain; background:#fff; border-radius:50%; box-shadow:0 0 8px rgba(66,133,244,0.2); flex-shrink:0;">
-          <div>
-            <h6 style="font-weight:600; margin:0;">Priya Singh</h6>
-            <p class="text-muted mb-1" style="font-size:14px;">Health Insurance</p>
-            <div style="color:#FFD700; font-size:17px; margin-bottom:5px;">⭐⭐⭐⭐</div>
-            <p style="font-size:15px; line-height:1.6; color:#333; margin:0;">
-              "Quick responses and excellent guidance. Policies365 made getting health insurance for my parents stress-free."
-            </p>
-          </div>
-        </div>
-      </div>
-
+        <!-- Arrows -->
+        <div class="swiper-button-next dtr-swiper-next"></div>
+        <div class="swiper-button-prev dtr-swiper-prev"></div>
     </div>
-
-    <!-- Navigation Arrows -->
-    <div class="swiper-button-next dtr-swiper-next"></div>
-    <div class="swiper-button-prev dtr-swiper-prev"></div>
-  </div>
-
-  <!-- Extra Styling -->
-  <style>
-    #reviews .swiper-slide:hover .dtr-testimonial-wrapper {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    }
-
-    @media (max-width: 768px) {
-      #reviews .dtr-testimonial-wrapper {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-      }
-
-      #reviews .dtr-testimonial-wrapper img {
-        margin-bottom: 12px;
-      }
-    }
-  </style>
+    <!-- Swiper ends --> 
+    
 </section>
-
-
 <!-- testimonial ends
 ================================================== --> 
 
@@ -1105,7 +1100,7 @@
             <div class="col-12 col-sm-6 col-lg-6 mb-4">
                 <p><img src="assets/images/P365_LOGO_WHITE.png" alt="Trustpilot Logo" style="max-width:150px;"></p>
                 <p class="dtr-rounded-alert" style="background: rgba(255,255,255,0.05); padding: 12px 15px; border-radius: 8px;">
-                    <strong>Policies365</strong> is </span> based on <span style="color:#FFD700;">2,450+ reviews</span>. <br>Trusted for Health, Motor, and Life Insurance services.
+                    <strong>Policies365</strong> is rated <span style="color:#FFD700;">4.8/5</span> based on <span style="color:#FFD700;">2,450+ reviews</span>. <br>Trusted for Health, Motor, and Life Insurance services.
                 </p>
             </div>
 
@@ -1113,8 +1108,9 @@
             <div class="col-12 col-sm-6 col-lg-2 mb-4">
                 <h6 class="text-uppercase font-weight-bold mb-3" style="color:white;">Guidelines</h6>
                 <ul class="list-unstyled">
-                    <li><a href="https://www.policies365.com/privacy-policy.html" class="text-white" style="text-decoration:none;">Privacy Policy</a></li>
-                    <li><a href="https://www.policies365.com/terms-conditions.html" class="text-white" style="text-decoration:none;">Terms of Use</a></li>
+                    <li><a href="#" class="text-white" style="text-decoration:none;">Privacy Policy</a></li>
+                    <li><a href="#" class="text-white" style="text-decoration:none;">Resources</a></li>
+                    <li><a href="#" class="text-white" style="text-decoration:none;">Terms of Use</a></li>
                 </ul>
             </div>
 
@@ -1122,8 +1118,9 @@
             <div class="col-12 col-sm-6 col-lg-2 mb-4">
                 <h6 class="text-uppercase font-weight-bold mb-3" style="color:white;">Company</h6>
                 <ul class="list-unstyled">
-                    <li><a href="https://www.navnitinsurance.com/nibpl-aboutus.html" class="text-white" style="text-decoration:none;">About Us</a></li>
-                    <li><a href="#contact" class="text-white" style="text-decoration:none;">Contact</a></li>
+                    <li><a href="#" class="text-white" style="text-decoration:none;">About Us</a></li>
+                    <li><a href="#" class="text-white" style="text-decoration:none;">Blog</a></li>
+                    <li><a href="#" class="text-white" style="text-decoration:none;">Contact</a></li>
                 </ul>
             </div>
 
@@ -1131,9 +1128,9 @@
             <div class="col-12 col-sm-6 col-lg-2 mb-4">
                 <h6 class="text-uppercase font-weight-bold mb-3" style="color:white;">Products</h6>
                 <ul class="list-unstyled">
-                    <li><a href="https://www.navnitinsurance.com/nibpl-health-insurance.html " class="text-white" style="text-decoration:none;">Health Insurance</a></li>
-                    <li><a href="https://www.navnitinsurance.com/nibpl-bike-insurance.html" class="text-white" style="text-decoration:none;">Motor Insurance</a></li>
-                    <li><a href="https://www.navnitinsurance.com/nibpl-life-insurance.html" class="text-white" style="text-decoration:none;">Life Insurance</a></li>
+                    <li><a href="#" class="text-white" style="text-decoration:none;">Health Insurance</a></li>
+                    <li><a href="#" class="text-white" style="text-decoration:none;">Motor Insurance</a></li>
+                    <li><a href="#" class="text-white" style="text-decoration:none;">Life Insurance</a></li>
                 </ul>
             </div>
 
@@ -1145,10 +1142,10 @@
             <div class="col-12 col-md-6">&copy; 2025 Policy 365. All Rights Reserved.</div>
             <div class="col-12 col-md-6 text-md-right">
                 <ul class="list-inline mb-0">
-                    <li class="list-inline-item"><a href="https://www.facebook.com/share/1N2RgREwBf/" class="text-white" style="text-decoration:none;"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="list-inline-item"><a href="#" class="text-white" style="text-decoration:none;"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-white" style="text-decoration:none;"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-white" style="text-decoration:none;"><i class="fab fa-twitter"></i></a></li>
                     <li class="list-inline-item"><a href="#" class="text-white" style="text-decoration:none;"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.instagram.com/policies365?igsh=MXEybmhkMHN1ZHZubA==" class="text-white" style="text-decoration:none;"><i class="fab fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-white" style="text-decoration:none;"><i class="fab fa-instagram"></i></a></li>
                 </ul>
             </div>
         </div>
