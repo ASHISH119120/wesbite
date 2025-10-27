@@ -176,7 +176,8 @@
     <!-- ============================= -->
 <!-- Policies365 Partner Features -->
 <!-- ============================= -->
-<section id="partner" class="dtr-py-6 bg-light">
+<!-- Partner Section -->
+<section id="partner" class="dtr-py-6 bg-light partner-section">
   <div class="container">
 
     <!-- Section Heading -->
@@ -193,40 +194,326 @@
     <div class="row text-center">
 
       <!-- Feature 1 -->
-      <div class="col-12 col-md-4 dtr-sm-mb-30px wow fadeInUp" data-wow-delay="0.3s">
-        <!-- Favicon Icon -->
-        <i class="fa-solid fa-chalkboard-user fa-3x color-accent dtr-mb-3"></i>
-        <!-- Heading -->
-        <h5 class="mb-2">Free Training & Certification</h5>
-        <!-- Text -->
-        <p>Get IRDAI-approved online training and become a certified partner no investment required.</p>
+      <div class="col-12 col-md-4 feature-box wow fadeInUp" data-wow-delay="0.3s">
+        <div class="feature-inner">
+          <div class="icon-circle">
+            <i class="fa-solid fa-chalkboard-user"></i>
+          </div>
+          <h5>Free Training & Certification</h5>
+          <p>Get IRDAI-approved online training and become a certified partner  no investment required.</p>
+        </div>
       </div>
 
       <!-- Feature 2 -->
-      <div class="col-12 col-md-4 dtr-sm-mb-30px wow fadeInUp" data-wow-delay="0.5s">
-        <!-- Favicon Icon -->
-       <i class="fa-solid fa-indian-rupee-sign fa-3x color-accent dtr-mb-3 creative-rupee"></i>
-
-
-        <!-- Heading -->
-        <h5 class="mb-2">High Commissions</h5>
-        <!-- Text -->
-        <p>Earn great commissions and enjoy fast, transparent payouts on every policy you sell.</p>
+      <div class="col-12 col-md-4 feature-box wow fadeInUp" data-wow-delay="0.5s">
+        <div class="feature-inner">
+          <div class="icon-circle">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+          </div>
+          <h5>High Commissions</h5>
+          <p>Earn great commissions and enjoy fast, transparent payouts on every policy you sell.</p>
+          <br>
+        </div>
       </div>
 
       <!-- Feature 3 -->
-      <div class="col-12 col-md-4 wow fadeInUp" data-wow-delay="0.7s">
-        <!-- Favicon Icon -->
-        <i class="fa-solid fa-headset fa-3x color-accent dtr-mb-3"></i>
-        <!-- Heading -->
-        <h5 class="mb-2">Full Partner Support</h5>
-        <!-- Text -->
-        <p>Our dedicated team helps you at every step from onboarding to customer claims assistance.</p>
+      <div class="col-12 col-md-4 feature-box wow fadeInUp" data-wow-delay="0.7s">
+        <div class="feature-inner">
+          <div class="icon-circle">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h5>Full Partner Support</h5>
+          <p>Our dedicated team helps you at every step  from onboarding to customer claim assistance.</p>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
+
+<!-- 🌈 CSS Styling -->
+<style>
+.partner-section {
+  background: linear-gradient(135deg, #f0f8ff, #e8f0ff);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating animated gradient background effect */
+.partner-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 20% 30%, rgba(0, 102, 255, 0.1), transparent 60%),
+              radial-gradient(circle at 80% 70%, rgba(255, 0, 102, 0.1), transparent 60%);
+  animation: floatBg 8s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+@keyframes floatBg {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-5%, -5%); }
+}
+
+/* Feature boxes */
+.feature-box {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+}
+
+.feature-inner {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  transform: translateY(0);
+}
+
+.feature-inner:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 102, 255, 0.2);
+  background: linear-gradient(145deg, #fefefe, #eaf3ff);
+}
+
+/* Icon Circle */
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 32px;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.feature-inner:hover .icon-circle {
+  transform: rotate(15deg) scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.5);
+  background: linear-gradient(135deg, #00b4ff, #007bff);
+}
+
+/* Headings and text */
+.feature-inner h5 {
+  font-weight: 600;
+  color: #1b1b1b;
+  margin-bottom: 10px;
+}
+
+.feature-inner p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Accent text color */
+.color-accent {
+  color: #007bff;
+}
+</style>
+
+
+<!-- 🌟 Policies365 Promo Popup -->
+<div id="policiesPopup" class="popup-overlay">
+  <div class="popup-box">
+    <button class="close-btn" onclick="closePopup()">&times;</button>
+
+    <div class="popup-header">
+      <img src="assets/images/P365_LOGO_COLOR.png" style="width:120px;height: auto;margin-right:8px; vertical-align: middle" alt="Policies365 Logo" class="popup-logo">
+      <h2>Welcome to <span>Policies365</span></h2>
+      <p>Your trusted partner for smarter insurance choices.</p>
+    </div>
+
+    <div class="popup-body">
+      <ul>
+        <li><i class="fa-solid fa-circle-check"></i> IRDAI-approved insurance partner</li>
+        <li><i class="fa-solid fa-handshake"></i> Trusted by thousands of policyholders</li>
+        <li><i class="fa-solid fa-bolt"></i> Fast quotes & hassle-free claims</li>
+      </ul>
+
+      <a href="#contactform" class="popup-btn" id="scrollToForm">Get Free Quote</a>
+    </div>
+  </div>
+</div>
+
+<!-- Popup Script -->
+<script>
+  // Show popup after 10 seconds
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.getElementById("policiesPopup").classList.add("show");
+    }, 10000); // 10 seconds
+  });
+
+  // Close popup
+  function closePopup() {
+    document.getElementById("policiesPopup").classList.remove("show");
+  }
+
+  // Smooth scroll to contact form and highlight it
+  document.getElementById("scrollToForm").addEventListener("click", function (event) {
+    event.preventDefault();
+    closePopup();
+
+    const target = document.getElementById("contactform");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+
+      // Add highlight animation
+      target.classList.add("highlight-flash");
+      setTimeout(() => {
+        target.classList.remove("highlight-flash");
+      }, 2000);
+    }
+  });
+</script>
+
+<!-- Popup + Highlight Styling -->
+<style>
+/* Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(6, 12, 34, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s ease;
+  z-index: 9999;
+}
+.popup-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Popup Box */
+.popup-box {
+  background: linear-gradient(145deg, #ffffff, #f4f8ff);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2), 0 0 25px rgba(0,123,255,0.15);
+  max-width: 500px;
+  width: 90%;
+  padding: 40px 35px;
+  text-align: center;
+  transform: scale(0.8) translateY(30px);
+  opacity: 0;
+  animation: popupIn 0.8s ease forwards;
+  position: relative;
+}
+
+/* Animation */
+@keyframes popupIn {
+  0% { transform: scale(0.7) translateY(30px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #222;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.close-btn:hover {
+  color: #007bff;
+  transform: rotate(90deg);
+}
+
+/* Header */
+.popup-header h2 {
+  color: #0d1b4c;
+  font-size: 26px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.popup-header span {
+  color: #007bff;
+}
+.popup-header p {
+  color: #444;
+  font-size: 16px;
+}
+.popup-logo {
+  width: 80px;
+  margin-bottom: 15px;
+  animation: floatLogo 3s ease-in-out infinite;
+}
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Popup Body */
+.popup-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+.popup-body li {
+  font-size: 16px;
+  color: #333;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.popup-body i {
+  color: #007bff;
+  font-size: 18px;
+}
+
+/* Button */
+.popup-btn {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: #fff;
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.popup-btn:hover {
+  background: linear-gradient(135deg, #0056d6, #0094ff);
+  box-shadow: 0 8px 20px rgba(0,123,255,0.4);
+  transform: translateY(-3px);
+}
+
+/* Contact form highlight effect */
+@keyframes flashHighlight {
+  0% { box-shadow: 0 0 0 rgba(0,123,255,0); }
+  50% { box-shadow: 0 0 20px rgba(0,123,255,0.8); }
+  100% { box-shadow: 0 0 0 rgba(0,123,255,0); }
+}
+.highlight-flash {
+  animation: flashHighlight 2s ease-in-out;
+  border-radius: 12px;
+}
+</style>
+
+
 
     <!-- quickfeature section ends
 ================================================== --> 
@@ -235,13 +522,14 @@
 <!-- ============================= -->
 <!-- Section 2: What You'll Get -->
 <!-- ============================= -->
-<section id="benefits" class="py-7 bg-light-pattern">
+<!-- Benefits Section -->
+<section id="benefits" class="py-7 bg-light-pattern benefits-section">
   <div class="container">
 
     <!-- Section Heading -->
     <div class="text-center mb-5">
       <h2 class="wow fadeInUp color-accent" data-wow-delay="0.2s">
-        What You’ll Get as a Policies365 Partner
+        What You’ll Get as a <span class="gradient-text">Policies365</span> Partner
       </h2>
       <p class="text-muted wow fadeInUp" data-wow-delay="0.3s">
         Full training, tools, and support to help you succeed in your insurance journey.
@@ -251,57 +539,197 @@
     <!-- Features Grid -->
     <div class="row g-4">
       
-      <!-- Feature 1: Comprehensive Training -->
-      <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+      <!-- Feature 1 -->
+      <div class="col-md-6 col-lg-3 feature-box" style="--delay:0.2s;">
         <div class="feature-card p-4 text-center">
-          <i class="fa-solid fa-chalkboard-user fa-3x color-accent mb-3"></i>
-          <h5 class="mb-2">Comprehensive Training</h5>
+          <div class="icon-circle"><i class="fa-solid fa-chalkboard-user"></i></div>
+          <h5>Comprehensive Training</h5>
           <p>Learn everything about insurance, sales, and customer management with easy online modules.</p>
         </div>
       </div>
 
-      <!-- Feature 2: Personalized Guidance -->
-      <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+      <!-- Feature 2 -->
+      <div class="col-md-6 col-lg-3 feature-box" style="--delay:0.4s;">
         <div class="feature-card p-4 text-center">
-          <i class="fa-solid fa-user-tie fa-3x color-accent mb-3"></i>
-          <h5 class="mb-2">Personalized Guidance</h5>
+          <div class="icon-circle"><i class="fa-solid fa-user-tie"></i></div>
+          <h5>Personalized Guidance</h5>
           <p>Our experts help you become a confident health, motor, or life insurance partner.</p>
+          <br>
         </div>
       </div>
 
-      <!-- Feature 3: High Commissions -->
-      <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.6s">
+      <!-- Feature 3 -->
+      <div class="col-md-6 col-lg-3 feature-box" style="--delay:0.6s;">
         <div class="feature-card p-4 text-center">
-          <i class="fa-solid fa-indian-rupee-sign fa-3x color-accent dtr-mb-3 creative-rupee"></i>
-          <h5 class="mb-2">High Commissions & Fast Payouts</h5>
+          <div class="icon-circle"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+          <h5>High Commissions & Fast Payouts</h5>
           <p>Get rewarded for every policy you sell with fast, reliable payouts.</p>
+          <br>
         </div>
       </div>
 
-      <!-- Feature 4: Zero Investment -->
-      <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s">
+      <!-- Feature 4 -->
+      <div class="col-md-6 col-lg-3 feature-box" style="--delay:0.8s;">
         <div class="feature-card p-4 text-center">
-          <i class="fa-solid fa-mobile-screen-button fa-3x color-accent mb-3"></i>
-          <h5 class="mb-2">Zero Investment Needed</h5>
-          <p>Start your journey using just your smartphone, no upfront cost required.</p>
+          <div class="icon-circle"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h5>Zero Investment Needed</h5>
+          <p>Start your journey using just your smartphone — no upfront cost required.</p>
+          <br>
         </div>
       </div>
 
     </div>
 
     <!-- Footer Note -->
-    <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.9s">
+    <div class="text-center mt-5">
       <p class="text-muted">
-        With Policies365, you’re not just an insurance agent — you’re a <strong>Certified Partner</strong>, backed by a trusted IRDAI-registered broker.
+        With Policies365, you’re not just an insurance agent — you’re a 
+        <strong>Certified Partner</strong>, backed by a trusted IRDAI-registered broker.
       </p>
     </div>
 
   </div>
 
-  <!-- VFX Elements: Floating Circles -->
-  <div class="vfx-circle-1"></div>
-  <div class="vfx-circle-2"></div>
+  <!-- Floating VFX Elements -->
+  <div class="vfx-circle vfx-circle-1"></div>
+  <div class="vfx-circle vfx-circle-2"></div>
+  <div class="vfx-circle vfx-circle-3"></div>
 </section>
+
+<!-- 🌈 CSS Styling & Animation -->
+<style>
+/* Section Background */
+.benefits-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f9ff, #edf3ff);
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Feature Card Animation */
+.feature-box {
+  opacity: 0;
+  transform: translateX(-60px);
+  animation: slideIn 0.8s forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Card Design */
+.feature-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 30%, rgba(0, 123, 255, 0.05), transparent 60%);
+  animation: rotateBg 10s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateBg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Hover Effects */
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 123, 255, 0.2);
+}
+
+.feature-card:hover .icon-circle {
+  transform: scale(1.15) rotate(15deg);
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+}
+
+/* Icon Circle */
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00b4ff, #007bff);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Text Styling */
+.feature-card h5 {
+  font-weight: 600;
+  color: #1b1b1b;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Floating Circles (VFX) */
+.vfx-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,123,255,0.15), transparent 70%);
+  animation: floatAnim 10s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+.vfx-circle-1 {
+  width: 250px; height: 250px;
+  top: 10%; left: -5%;
+  animation-delay: 0s;
+}
+
+.vfx-circle-2 {
+  width: 200px; height: 200px;
+  bottom: 5%; right: -3%;
+  animation-delay: 2s;
+}
+
+.vfx-circle-3 {
+  width: 150px; height: 150px;
+  bottom: 20%; left: 40%;
+  animation-delay: 4s;
+}
+
+@keyframes floatAnim {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
+  100% { transform: translateY(-20px) rotate(15deg); opacity: 0.9; }
+}
+</style>
+
 
 
 
